@@ -29,7 +29,7 @@ def hello_heda():
     return render_template('home.html', jobs=JOBS, company_name='Heda')
 
 
-@app.route('/jobs')
+@app.route('/api/jobs')
 def list_jobs():
     return jsonify(JOBS)
 
