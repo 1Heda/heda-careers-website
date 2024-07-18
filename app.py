@@ -24,16 +24,15 @@ JOBS = [{
 }]
 
 
-
 @app.route('/')
 def hello_heda():
-  return render_template('home.html', jobs=JOBS, company_name='Heda')
+    return render_template('home.html', jobs=JOBS, company_name='Heda')
 
 
-@app.route("/jobs")
+@app.route('/jobs')
 def list_jobs():
-  return jsonify(JOBS)
+    return jsonify(JOBS)
 
 
 if __name__ == '__main__':
-  app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', debug=True)
